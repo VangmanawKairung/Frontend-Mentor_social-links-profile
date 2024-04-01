@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social links profile</title>
+
+    <style>
+      /* Import font from local */
+      @font-face {
+        font-family: Inter;
+        src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+      }
+
+      /* Set the root */
+      * {
+        margin: 0; /* Set zero margin */
+        padding: 0; /* Set zero padding */
+        overflow: hidden; /* Hidden scroll bar */
+        box-sizing: border-box; /* Box size includes padding and border */
+        font-family: Inter; /* Imported local font */
+        color: hsl(0, 0%, 100%); /* Regular font color */
+        font-size: 14px; /* Regular font size */
+      }
+
+      /* Set backgroung color for the page */
+      body {
+        background-color: hsl(0, 0%, 8%);
+      }
+
+      /* Set the content container */
+      .container {
+        /* Set position to center */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+
+        /* Set contaiuner background color */
+        background-color: hsl(0, 0%, 12%);
+
+        /* Set content display */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Set up profile image */
+      img {
+        width: 90px;
+        border-radius: 50%;
+      }
+
+      /* Set up account display name */
+      .name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      /* Set up account display address */
+      .address {
+        color: hsl(75, 94%, 57%);
+        font-weight: normal;
+      }
+
+      /* SEt up account display carrer info */
+      .career {
+        font-weight: light;
+      }
+
+      /* Set up all of contact options */
+      .contact {
+        height: 290px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Set up each contact option */
+      button {
+        width: 100%;
+        height: 45px;
+
+        font-weight: bold;
+        background-color: hsl(0, 0%, 20%);
+        outline: none;
+        border: none;
+        border-radius: 7px;
+      }
+
+      /* Set up each contect option when hovering */
+      button:hover {
+        cursor: pointer;
+        color: hsl(0, 0%, 8%);
+        background-color: hsl(75, 94%, 57%);
+        font-weight: bold;
+      }
+
+      /* Responsive setup */
+      /* For the device with the width of 375 to 1439 px */
+      @media (min-width: 375px) and (max-width: 1439px) {
+        .container {
+          width: 320px;
+          height: 580px;
+
+          padding: 25px;
+
+          border-radius: 10px;
+        }
+
+        .contact {
+          width: 280px;
+        }
+      }
+
+      /* For the device with the width over 1440px */
+      @media (min-width: 1440px) {
+        .container {
+          width: 380px;
+          height: 610px;
+
+          padding: 40px;
+        }
+
+        .contact {
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="assets/images/avatar-jessica.jpeg" alt="Jessica image" />
+      <div class="info">
+        <div class="name">Jessica Randall</div>
+        <div class="address">London, United Kingdom</div>
+      </div>
+      <div class="career">"Front-end developer and avid reader."</div>
+
+      <div class="contact">
+        <button>GitHub</button>
+        <button>Frontend Mentor</button>
+        <button>LinkedIn</button>
+        <button>Twitter</button>
+        <button>Instagram</button>
+      </div>
+    </div>
+  </body>
+</html>
