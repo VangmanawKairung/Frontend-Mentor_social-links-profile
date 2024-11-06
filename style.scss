@@ -1,122 +1,97 @@
-// @font-face {
-//         font-family: Inter;
-//         src: url("source/assets/fonts/Inter-VariableFont_slnt,wght.ttf");
-//       }
+// Font
+$root-font-family: Inter;
+$root-font-size: 14px;
+$root-font-weight: 600;
 
-//       /* Set the root */
-//       * {
-//         margin: 0; /* Set zero margin */
-//         padding: 0; /* Set zero padding */
-//         overflow: hidden; /* Hidden scroll bar */
-//         box-sizing: border-box; /* Box size includes padding and border */
-//         font-family: Inter; /* Imported local font */
-//         color: hsl(0, 0%, 100%); /* Regular font color */
-//         font-size: 14px; /* Regular font size */
-//       }
+// Color
+$white: hsl(0, 0%, 100%);
+$neon-green: hsl(75, 94%, 57%);
+$grey: hsl(0, 0%, 20%);
+$dark-grey: hsl(0, 0%, 12%);
+$off-black: hsl(0, 0%, 8%);
 
-//       /* Set backgroung color for the page */
-//       body {
-//         background-color: hsl(0, 0%, 8%);
-//       }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white;
+  font-family: $root-font-family;
+  font-size: $root-font-size;
+  font-weight: $root-font-weight;
+  text-align: center;
+}
 
-//       /* Set the content container */
-//       .container {
-//         /* Set position to center */
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         translate: -50% -50%;
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $off-black;
 
-//         /* Set contaiuner background color */
-//         background-color: hsl(0, 0%, 12%);
+  main {
+    width: 327px;
+    height: 579px;
+    padding: 24px;
+    background: $dark-grey;
+    border-radius: 12px;
 
-//         /* Set content display */
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         align-items: center;
-//       }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 
-//       /* Set up profile image */
-//       img {
-//         width: 90px;
-//         border-radius: 50%;
-//       }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-//       /* Set up account display name */
-//       .name {
-//         font-size: 1.5rem;
-//         font-weight: bold;
-//         margin-bottom: 10px;
-//       }
+    img {
+      width: 88px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-//       /* Set up account display address */
-//       .address {
-//         color: hsl(75, 94%, 57%);
-//         font-weight: normal;
-//       }
+    .user-info {
+      margin-bottom: 11px;
+    }
 
-//       /* SEt up account display carrer info */
-//       .career {
-//         font-weight: light;
-//       }
+    h1.user-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-//       /* Set up all of contact options */
-//       .contact {
-//         height: 290px;
+    p.user-address {
+      color: $neon-green;
+    }
 
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//       }
+    p.user-career {
+      font-weight: 400;
+      margin-bottom: 9px;
+    }
 
-//       /* Set up each contact option */
-//       button {
-//         width: 100%;
-//         height: 45px;
+    button.user-contacts {
+      width: 100%;
+      height: 45px;
+      background-color: $grey;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
 
-//         font-weight: bold;
-//         background-color: hsl(0, 0%, 20%);
-//         outline: none;
-//         border: none;
-//         border-radius: 7px;
-//       }
+    button.user-contacts:hover {
+      color: $dark-grey;
+      background-color: $neon-green;
+      cursor: pointer;
+    }
+  }
+}
 
-//       /* Set up each contect option when hovering */
-//       button:hover {
-//         cursor: pointer;
-//         color: hsl(0, 0%, 8%);
-//         background-color: hsl(75, 94%, 57%);
-//         font-weight: bold;
-//       }
-
-//       /* Responsive setup */
-//       /* For the device with the width of 375 to 1439 px */
-//       @media (min-width: 375px) and (max-width: 1439px) {
-//         .container {
-//           width: 320px;
-//           height: 580px;
-
-//           padding: 25px;
-
-//           border-radius: 10px;
-//         }
-
-//         .contact {
-//           width: 280px;
-//         }
-//       }
-
-//       /* For the device with the width over 1440px */
-//       @media (min-width: 1440px) {
-//         .container {
-//           width: 380px;
-//           height: 610px;
-
-//           padding: 40px;
-//         }
-
-//         .contact {
-//           width: 300px;
-//         }
-//       }
+@media (min-width: 1440px) {
+  body {
+    main {
+      width: 384px;
+      height: 611px;
+      padding: 40px;
+    }
+  }
+}
