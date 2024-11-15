@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend-Mentor_social-links-profile](https://github.com/VangmanawKairung/Frontend-Mentor_social-links-profile)
+- Solution URL: [Responsive Webpage for Social Links Profile using HTML and CSS (Sass)](https://www.frontendmentor.io/solutions/responsive-webpage-for-social-links-profile-using-html-and-css-sass-wg8pD-iwQK)
 - Live Site URL: [Frontend Mentor | Social links profile](https://vangmanawkairung.github.io/Frontend-Mentor_social-links-profile/)
 
 ## My process
