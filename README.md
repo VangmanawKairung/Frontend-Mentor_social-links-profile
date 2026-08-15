@@ -1,23 +1,25 @@
 # Frontend Mentor - Social links profile solution
 
+![](.reference/preview.jpg)
+
 This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Frontend Mentor - Social links profile solution](#frontend-mentor---social-links-profile-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+    - [AI Collaboration](#ai-collaboration)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,93 +31,92 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<details>
+  <summary>Mobile view</summary>
+  <img src="screenshots/mobile-view.png" alt="Social links profile challenge - Mobile view" width="375px">
+</details>
+<details>
+  <summary>Desktop view</summary>
+  <img src="screenshots/desktop-view.png" alt="Social links profile challenge - Desktop view">
+</details>
+<details>
+  <summary>Active state view</summary>
+  <img src="screenshots/active-state-view.png" alt="Social links profile challenge - Active state view">
+</details>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Social Links Profile with React, CSS Custom Properties & GitHub Action](https://www.frontendmentor.io/solutions/test-qpWd-y8VlX)
+- Live Site URL: [Frontend Mentor | Social links profile](https://challenged-by-frontend-mentor.github.io/social-links-profile/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS custom properties (variables defined by functional usage)
+- Flexbox & Grid layouts
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Responsive design with Media Queries
+- **[React](https://reactjs.org/)** - Component-based UI library
+- **GitHub Actions** - Automated CI/CD deployment pipeline to GitHub Pages
+- **Pixel-perfect workflow**: Image overlay techniques & macOS Preview tool for precise pixel measurement
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Refactoring this project from static HTML/CSS to React provided crucial insights—not only into technical implementations, but also into problem-solving mindsets:
 
-To see how you can add code snippets, see below:
+- **Troubleshooting Beyond the Surface (`#root` Container)**: I spent a significant amount of time trying to fix sizing and layout issues, only to realize the root cause was the default constraints on React's `#root` container. This was a powerful lesson in **avoiding tunnel vision**—instead of fixating on the same CSS rules repeatedly, I learned to zoom out, inspect the entire DOM hierarchy, and analyze the problem holistically.
+- **Automated Deployment with GitHub Actions**: Although YAML syntax was unfamiliar to me at first, I pushed through the trial-and-error process until the CI/CD pipeline deployed successfully. This experience demystified workflow configurations and sparked my interest in mastering YAML for future automation setups.
+- **Layout-first Workflow**: Starting with structural wireframing before styling accelerated the entire development cycle.
+- **Semantic CSS Variables**: Scoping CSS variables by usage area (e.g., `--button-bg`, `--card-bg`) made component styling scalable and easy to maintain.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```jsx
+// React Component sample with accessible link structure
+const SocialLink = ({ name, url }) => {
+  return (
+    <a 
+      href={url} 
+      className="social-link"
+      target="_blank" 
+      rel="noopener noreferrer"
+      aria-label={`Visit my ${name} profile`}
+    >
+      {name}
+    </a>
+  );
+};
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For upcoming projects, I aim to focus on:
+- Mastering YAML & CI/CD Pipelines: Learning the core syntax of .yml configuration files to write custom GitHub Actions workflows confidently from scratch.
+- Holistic Debugging Habits: Applying a step-by-step checklist to inspect outer wrapper constraints (like #root or body) early in the debugging process before tweaking internal element styles.
+- Advanced Accessibility (a11y): Enhancing keyboard navigation and standard screen reader integration.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [React Docs - Rendering Elements](https://react.dev/learn/rendering-lists) - Helped me understand component structure and how React renders elements into the DOM root container.
+- [GitHub Actions Documentation for GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) - Essential guide for understanding CI/CD workflow configurations (`.yml`) and deploying static builds to GitHub Pages.
+- [MDN Web Docs - CSS Layout and Centering](https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Center_an_item) - Great reference for comparing layout-first positioning methods using Flexbox, Grid, and CSS transform techniques.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+I leveraged AI assistants as active pair-programming partners throughout this project:
+- **Tools Used**: Gemini (for architectural guidance, React refactoring, and CI/CD troubleshooting) and Google Search AI mode (for rapid documentation and syntax checks).
+- **Workflow Impact**: AI helped diagnose deployment script gaps in GitHub Actions, guided the base path routing adjustments, and provided valuable feedback during the debugging process.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- GitHub: [Kirung Vangmanaw](https://github.com/VangmanawKairung)
+- Frontend Mentor - [@VangmanawKairung](https://www.frontendmentor.io/profile/VangmanawKairunge)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would like to express my sincere appreciation to:
+- Myself, for remaining persistent through troubleshooting hurdles and continuously learning from mistakes.
+- The **Frontend Mentor** community for providing real-world challenge setups.
+- **Google** for **Gemini** and **Google Search AI mode**, which provided excellent guidance during refactoring and deployment setup.
+- **Apple** for **Preview on macOS**, which served as a simple yet effective tool for inspecting design files and spec references.
