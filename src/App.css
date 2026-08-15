@@ -130,6 +130,7 @@ body {
   width: 50%;
   text-align: center;
   font-size: 0.7rem;
+  opacity: 0.4;
 
   a {
     text-decoration: none;
