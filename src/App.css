@@ -72,7 +72,7 @@ body {
     width: 100%;
 
     .card__title {
-      font-weight: var(--fw-regular);
+      font-weight: var(--fw-bold);
       font-size: 1.62rem;
       margin-bottom: 5px;
     }
