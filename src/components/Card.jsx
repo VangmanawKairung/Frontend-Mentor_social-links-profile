@@ -19,8 +19,8 @@ const Card = () => {
       <div className="card__content">
         <h1 className="card__title">
           Jessica Randall{" "}
-          <span className="card__address">London, United Kingdom</span>
         </h1>
+          <p className="card__address"><br/>London, United Kingdom</p>
         <p className="card__description">
           "Front-end developer and avid reader."
         </p>
@@ -36,8 +36,7 @@ export default Card;
 
 const SocialLink = ({ social_name }) => {
   return (
-    <div className="social">
+
       <button className="social__btn">{social_name}</button>
-    </div>
   );
 };
