@@ -61,7 +61,7 @@ body {
     width: 88px;
     height: 88px;
     border-radius: 50%;
-    margin-bottom: 38px;
+    margin-bottom: 25px;
   }
 
   .card__content {
@@ -74,14 +74,14 @@ body {
     .card__title {
       font-weight: var(--fw-regular);
       font-size: 1.62rem;
-      line-height: 0.4;
+      margin-bottom: 5px;
     }
 
     .card__address {
       color: var(--clr-green);
       font-size: 0.87rem;
       font-weight: var(--fw-bold);
-      margin-bottom: 27px;
+      margin-bottom: 28px;
     }
 
     .card__description {
@@ -96,7 +96,7 @@ body {
       gap: 16px;
       width: 100%;
 
-      .social__btn {
+      .social__link {
         width: 100%;
         height: 45px;
         background-color: var(--clr-grey-700);
@@ -106,9 +106,14 @@ body {
         border: none;
         border-radius: 8px;
         cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      .social__btn:hover {
+      .social__link:hover,
+      .social__link:focus-visible {
         cursor: pointer;
         color: var(--clr-grey-900);
         background-color: var(--clr-green);
